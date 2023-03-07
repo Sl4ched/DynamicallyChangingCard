@@ -7,7 +7,11 @@ img {
 body {
     margin: 0;
     padding: 0;
-    background: rgb(238, 238, 238);
+    background: white;
+}
+
+.flexContainerMain {
+    display: flex;
 }
 
 .flexContainer {
@@ -18,6 +22,7 @@ body {
     display: flex;
     justify-content: space-between;
 }
+
 .flexContainer3 {
     display: flex;
     max-width: 340px;
@@ -32,10 +37,8 @@ body {
 
     display: flex;
     flex-flow: column;
-
-    padding-left: 400px;
-
     justify-content: center;
+    padding-left: 300px;
     flex: 1 1 600px;
 
 }
@@ -104,6 +107,7 @@ body {
     outline: none;
 
 }
+
 .threeV2 {
     flex: 1 1 100px;
     margin: 10px 0 15px 15px;
@@ -134,7 +138,7 @@ body {
 
 .frontSideOfCard {
     position: relative;
-    left: 150px;
+    left: 130px;
     top: 200px;
     height: 280px;
 
@@ -146,8 +150,8 @@ body {
 
 .backSideOfCard {
     position: relative;
-    left: 230px;
-    top: 230px;
+    left: 210px;
+    top: 150px;
     height: 280px;
 
 }
@@ -192,9 +196,10 @@ body {
     bottom: 8px;
     font-size: 12px;
 }
+
 .flexContainer5 {
     display: flex;
-    flex-flow : column;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
     flex-grow: 1;
@@ -221,4 +226,78 @@ body {
     border-radius: 7px;
     width: 300px;
     height: 50px;
+}
+
+@media screen and (max-width: 890px) {
+
+    .flexContainerMain {
+        display: flex;
+        flex-flow: column;
+
+    }
+
+    .frontSideOfCard {
+        position: relative;
+        display: flex;
+        flex-flow: column;
+        max-width: 380px;
+        padding: 20px;
+        left: 160px;
+        top: 200px;
+        z-index: 1;
+
+    }
+
+    .backSideOfCard {
+        position: relative;
+        max-width: 380px;
+        z-index: 0;
+        left: 300px;
+        top: -250px;
+
+
+    }
+
+    .textOrder3 {
+        position: relative;
+        color: white;
+        top: 92px;
+        left: 305px;
+    }
+
+    .screenLeft {
+        min-height: 10px;
+        max-height: 300px;
+        margin-bottom: 100px;
+    }
+
+    .screenRight {
+
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        padding-left: 200px;
+        flex: 1 1 600px;
+
+    }
+
+    .flexContainer4 {
+        margin-top: 100px;
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .screenRight {
+
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        padding-left: 230px;
+        flex: 1 1 600px;
+
+    }
+
 }

@@ -83,7 +83,7 @@ function App() {
 
     return (<div>
 
-        <div className={"flexContainer"}>
+        <div className={"flexContainerMain"}>
 
             <ScreenLeft cardNumber={cardNumber} cvc={cvc} month={month} year={year} name={name}/>
 
@@ -132,10 +132,10 @@ function App() {
 
                 <div className={"flexContainer3"}>
                     {(isBlank1 || isBlank2) ? <div className={"font textOrder4"}>Can't be blank</div> :
-                        <div style={{color: "rgb(238, 238, 238)"}} className={"font textOrder4"}>Can't be
+                        <div style={{color: "white"}} className={"font textOrder4"}>Can't be
                             blank</div>}
                     {isBlank3 ? <div className={"font textOrder5"}>Can't be blank</div> :
-                        <div style={{color: "rgb(238, 238, 238)"}} className={"font textOrder5"}>Can't be
+                        <div style={{color: "white"}} className={"font textOrder5"}>Can't be
                             blank</div>}
                 </div>
 
