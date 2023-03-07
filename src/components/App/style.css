@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+img {
+    width: 80px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(238, 238, 238);
+}
+
+.flexContainer {
+    display: flex;
+}
+
+.flexContainer2 {
+    display: flex;
+    justify-content: space-between;
+}
+.flexContainer3 {
+    display: flex;
+    max-width: 340px;
+}
+
+.screenLeft {
+    flex: 0 0 450px;
+    min-height: 100vh;
+}
+
+.screenRight {
+
+    display: flex;
+    flex-flow: column;
+
+    padding-left: 400px;
+
+    justify-content: center;
+    flex: 1 1 600px;
+
+}
+
+.styleOfInput {
+
+    border-radius: 7px;
+    height: 33px;
+    border: 1px solid black;
+    padding-left: 15px;
+
+}
+
+.font {
+    font-weight: 500;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.textAlignment {
+    margin: 0 0 10px 0;
+}
+
+.one {
+    flex: 1 1 10px;
+    flex-shrink: 1;
+    margin-bottom: 20px;
+    max-width: 335px;
+    margin-right: 100px;
+    border: black solid 1px;
+    outline: none;
+}
+
+.oneV2 {
+    flex: 1 1 10px;
+    flex-shrink: 1;
+    margin-bottom: 20px;
+    max-width: 335px;
+    margin-right: 100px;
+    border: red solid 1px;
+    outline: none;
+}
+
+
+.two {
+    flex: 1 1 10px;
+    margin: 10px 7px 20px 0;
+    max-width: 50px;
+    border: 1px gray solid;
+    outline: none;
+
+}
+
+.twoV2 {
+    flex: 1 1 10px;
+    margin: 10px 7px 20px 0;
+    max-width: 50px;
+    border: 1px red solid;
+    outline: none;
+
+}
+
+.three {
+    flex: 1 1 100px;
+    margin: 10px 0 15px 15px;
+    max-width: 165px;
+    outline: none;
+
+}
+.threeV2 {
+    flex: 1 1 100px;
+    margin: 10px 0 15px 15px;
+    max-width: 165px;
+    border: red solid 1px;
+    outline: none;
+
+}
+
+.button {
+    margin-top: 20px;
+    margin-right: 100px;
+    max-width: 350px;
+    flex: 1 1 240px;
+    height: 50px;
+    /*design*/
+    background: #151414;
+    color: white;
+    text-align: center;
+    border-radius: 7px;
+}
+
+.spaceBetween {
+    margin-left: 25px;
+}
+
+/*Card Layout*/
+
+.frontSideOfCard {
+    position: relative;
+    left: 150px;
+    top: 200px;
+    height: 280px;
+
+    display: flex;
+    flex-flow: column;
+
+    padding: 20px;
+}
+
+.backSideOfCard {
+    position: relative;
+    left: 230px;
+    top: 230px;
+    height: 280px;
+
+}
+
+.textOrder {
+    margin-top: 70px;
+    font-size: 32px;
+    color: white;
+}
+
+.textOrder2 {
+    margin-top: 20px;
+    color: white;
+}
+
+.textOrder3 {
+    position: relative;
+    color: white;
+    top: 110px;
+    left: 369px;
+}
+
+.textOrder4 {
+    position: relative;
+    color: red;
+    flex-grow: 1;
+    bottom: 8px;
+    font-size: 12px;
+}
+
+.textOrder5 {
+    position: relative;
+    color: red;
+    flex-grow: 1;
+    bottom: 8px;
+    font-size: 12px;
+}
+
+.textOrder6 {
+    position: relative;
+    color: red;
+    bottom: 8px;
+    font-size: 12px;
+}
+.flexContainer5 {
+    display: flex;
+    flex-flow : column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+
+}
+
+.flexContainer4 {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.image {
+    width: 60px;
+}
+
+.button2 {
+    background: #151414;
+    margin-top: 20px;
+    color: white;
+    text-align: center;
+    border-radius: 7px;
+    width: 300px;
+    height: 50px;
+}
