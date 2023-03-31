@@ -112,22 +112,22 @@ function App() {
                 </div>
 
                 <div className={"flexContainer"}>
-                    {isBlank1 ? <input onChange={changeListener3} placeholder={"MM"}
-                                       className={"styleOfInput twoV2 slideRight font"} type={"number"}/> :
-                        <input onChange={changeListener3} placeholder={"MM"}
-                               className={"styleOfInput two slideRight font"} type={"number"}/>}
+                    {isBlank1 ? <input maxLength={2} onChange={changeListener3} placeholder={"MM"}
+                                       className={"styleOfInput twoV2 slideRight font"} type={"text"}/> :
+                        <input maxLength={2} onChange={changeListener3} placeholder={"MM"}
+                               className={"styleOfInput two slideRight font"} type={"text"}/>}
 
                     {isBlank2 ?
-                        <input onChange={changeListener4} placeholder={"YY"} className={"styleOfInput twoV2 font"}
-                               type={"number"}/> :
-                        <input onChange={changeListener4} placeholder={"YY"} className={"styleOfInput two font"}
-                               type={"number"}/>}
-                    {isBlank3 ? <input onChange={changeListener5} placeholder={"e.g. 123"}
+                        <input maxLength={2} onChange={changeListener4} placeholder={"YY"} className={"styleOfInput twoV2 font"}
+                               type={"text"}/> :
+                        <input maxLength={2} onChange={changeListener4} placeholder={"YY"} className={"styleOfInput two font"}
+                               type={"text"}/>}
+                    {isBlank3 ? <input maxLength={3} onChange={changeListener5} placeholder={"e.g. 123"}
                                        className={"styleOfInput threeV2 font"}
-                                       type={"number"}/> :
-                        <input onChange={changeListener5} placeholder={"e.g. 123"}
+                                       type={"text"}/> :
+                        <input maxLength={3} onChange={changeListener5} placeholder={"e.g. 123"}
                                className={"styleOfInput three font"}
-                               type={"number"}/>}
+                               type={"text"}/>}
                 </div>
 
                 <div className={"flexContainer3"}>
