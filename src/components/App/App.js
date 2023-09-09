@@ -91,16 +91,17 @@ function App() {
 
                 <div className={"font textAlignment"}>CARDHOLDER NAME</div>
                 <div className={"flexContainer"}>
-                    <input onChange={changeListener1} placeholder={"e.g. Jane Appleseed"}
+                    <input maxLength={35} onChange={changeListener1} placeholder={"e.g. Jane Appleseed"}
                            className={"styleOfInput one font"}
                            type={"text"}/>
                 </div>
 
                 <div className={"font textAlignment"}>CARD NUMBER</div>
                 <div className={"flexContainer"}>
-                    {cardNumberWarning ? <input onChange={changeListener2} placeholder={"e.g. 1234 5678 9123 0000"}
-                                                className={"styleOfInput oneV2 font"} type={"text"}/> :
-                        <input onChange={changeListener2} placeholder={"e.g. 1234 5678 9123 0000"}
+                    {cardNumberWarning ?
+                        <input maxLength={16} onChange={changeListener2} placeholder={"e.g. 1234 5678 9123 0000"}
+                               className={"styleOfInput oneV2 font"} type={"text"}/> :
+                        <input maxLength={16} onChange={changeListener2} placeholder={"e.g. 1234 5678 9123 0000"}
                                className={"styleOfInput one font"} type={"text"}/>}
                 </div>
 
@@ -118,9 +119,11 @@ function App() {
                                className={"styleOfInput two slideRight font"} type={"text"}/>}
 
                     {isBlank2 ?
-                        <input maxLength={2} onChange={changeListener4} placeholder={"YY"} className={"styleOfInput twoV2 font"}
+                        <input maxLength={2} onChange={changeListener4} placeholder={"YY"}
+                               className={"styleOfInput twoV2 font"}
                                type={"text"}/> :
-                        <input maxLength={2} onChange={changeListener4} placeholder={"YY"} className={"styleOfInput two font"}
+                        <input maxLength={2} onChange={changeListener4} placeholder={"YY"}
+                               className={"styleOfInput two font"}
                                type={"text"}/>}
                     {isBlank3 ? <input maxLength={3} onChange={changeListener5} placeholder={"e.g. 123"}
                                        className={"styleOfInput threeV2 font"}
