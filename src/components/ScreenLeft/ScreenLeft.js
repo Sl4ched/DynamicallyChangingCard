@@ -13,7 +13,7 @@ const ScreenLeft = (props) => {
             if (window.innerWidth > 500 && bg !== `url('${require("./photos/bg-main-desktop.png")}')`) {
                 setBg(`url('${require("./photos/bg-main-desktop.png")}')`)
                 setBgSize("160%")
-            } else if (window.innerWidth <= 700 && bg !== `url('${require("./photos/bg-main-mobile.png")}')`) {
+            } else if (window.innerWidth <= 500 && bg !== `url('${require("./photos/bg-main-mobile.png")}')`) {
                 setBg(`url('${require("./photos/bg-main-mobile.png")}')`)
                 setBgSize("100%")
             }
@@ -56,7 +56,10 @@ const ScreenLeft = (props) => {
 
                 <div className={"flexContainer2"}>
 
-                    {props.name.length > 30 ?
+                    {windowSize <= 400 ? props.name.length > 15 ?
+                        <div className={"textOrder2 font"}>{props.name.substring(0, 15)}...</div> :
+                        props.name.length === 0 ? <div className={"textOrder2 font"}>JANE APPLESEED</div> :
+                            <div className={"textOrder2 font"}>{props.name}</div> : props.name.length > 30 ?
                         <div className={"textOrder2 font"}>{props.name.substring(0, 30)}...</div> :
                         props.name.length === 0 ? <div className={"textOrder2 font"}>JANE APPLESEED</div> :
                             <div className={"textOrder2 font"}>{props.name}</div>}
