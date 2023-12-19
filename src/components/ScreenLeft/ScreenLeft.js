@@ -13,7 +13,7 @@ const ScreenLeft = (props) => {
             if (window.innerWidth > 500 && bg !== `url('${require("./photos/bg-main-desktop.png")}')`) {
                 setBg(`url('${require("./photos/bg-main-desktop.png")}')`)
                 setBgSize("160%")
-            } else if (window.innerWidth <= 500 && bg !== `url('${require("./photos/bg-main-mobile.png")}')`) {
+            } else if (window.innerWidth <= 700 && bg !== `url('${require("./photos/bg-main-mobile.png")}')`) {
                 setBg(`url('${require("./photos/bg-main-mobile.png")}')`)
                 setBgSize("100%")
             }

@@ -4,10 +4,11 @@ img {
     width: 80px;
 }
 
-body {
+body,html {
     margin: 0;
     padding: 0;
     background: white;
+    overflow-x: hidden;
 }
 
 .wholePageContainer {
@@ -225,11 +226,6 @@ body {
 
 @media (max-width: 391px) {
 
-    html {
-        max-width: 390px;
-        max-height: 844px;
-    }
-
     img {
         width: 55px;
     }
@@ -255,7 +251,7 @@ body {
         width: 240px;
         padding: 20px 30px 20px 20px;
         z-index: 1;
-        top: 200px;
+        top: 175px;
         left: 0;
 
     }
@@ -263,7 +259,7 @@ body {
     .backSideOfCard {
         width: 290px;
         z-index: 0;
-        top: -20px;
+        top: -40px;
         left: 0;
 
     }
