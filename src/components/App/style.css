@@ -225,6 +225,11 @@ body {
 
 @media (max-width: 391px) {
 
+    html {
+        max-width: 390px;
+        max-height: 844px;
+    }
+
     img {
         width: 55px;
     }
@@ -283,7 +288,7 @@ body {
         flex-flow: column;
         justify-content: center;
         align-items: center;
-
+        margin-top: 90px;
     }
 
     .flexContainer4 {
