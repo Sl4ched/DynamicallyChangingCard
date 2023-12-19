@@ -3,7 +3,7 @@ import "./style.css"
 import CorrectScreen from "../CorrectScreen/CorrectScreen";
 import ScreenLeft from "../ScreenLeft/ScreenLeft";
 
-function App() {
+export default function App() {
 
     const [cardNumber, setCardNumber] = useState("0000 0000 0000 0000")
     const [name, setName] = useState("JANE APPLESEED")
@@ -52,7 +52,6 @@ function App() {
     const changeListener2 = (e) => {
         setCardNumber(e.target.value)
         setCardNumberWarning(isThereALetter(e.target.value, e.target.value.length))
-
     }
     const changeListener3 = (e) => {
         const val = e.target.value.toString()
@@ -83,68 +82,74 @@ function App() {
 
     return (<div>
 
-        <div className={"flexContainerMain"}>
+        <div className={"wholePageContainer"}>
 
             <ScreenLeft cardNumber={cardNumber} cvc={cvc} month={month} year={year} name={name}/>
 
+            <div style={{flexGrow: 1, minWidth: "225px", maxWidth: "350px"}}></div>
+
             {lastControl ? <div className={"screenRight"}>
 
-                <div className={"font textAlignment"}>CARDHOLDER NAME</div>
-                <div className={"flexContainer"}>
-                    <input maxLength={35} onChange={changeListener1} placeholder={"e.g. Jane Appleseed"}
+                <div className={"inputContainer"}> {/*right input container*/}
+
+                    <div className={"font textAlignment"}>CARDHOLDER NAME</div>
+
+                    <input onChange={changeListener1}
+                           placeholder={"e.g. Jane Appleseed"}
                            className={"styleOfInput one font"}
                            type={"text"}/>
-                </div>
 
-                <div className={"font textAlignment"}>CARD NUMBER</div>
-                <div className={"flexContainer"}>
+
+                    <div className={"font textAlignment"}>CARD NUMBER</div>
                     {cardNumberWarning ?
-                        <input maxLength={16} onChange={changeListener2} placeholder={"e.g. 1234 5678 9123 0000"}
+                        <input maxLength={16} onChange={changeListener2}
+                               placeholder={"e.g. 1234 5678 9123 0000"}
                                className={"styleOfInput oneV2 font"} type={"text"}/> :
                         <input maxLength={16} onChange={changeListener2} placeholder={"e.g. 1234 5678 9123 0000"}
                                className={"styleOfInput one font"} type={"text"}/>}
-                </div>
 
-                {cardNumberWarning && <div className={"textOrder6 font"}>Wrong format,numbers only</div>}
+                    {cardNumberWarning &&
+                        <div className={"textOrder6 font"}>Wrong format,numbers only</div>
+                    }
 
-                <div className={"flexContainer"}>
-                    <div className={"font slideRight"}>EXP. DATE (MM/YY)</div>
-                    <div className={"font spaceBetween"}>CVC</div>
-                </div>
+                    <div className={"flexContainer"}>
+                        <div className={"font slideRight"}>EXP. DATE (MM/YY)</div>
+                        <div className={"font spaceBetween"}>CVC</div>
+                    </div>
 
-                <div className={"flexContainer"}>
-                    {isBlank1 ? <input maxLength={2} onChange={changeListener3} placeholder={"MM"}
-                                       className={"styleOfInput twoV2 slideRight font"} type={"text"}/> :
-                        <input maxLength={2} onChange={changeListener3} placeholder={"MM"}
-                               className={"styleOfInput two slideRight font"} type={"text"}/>}
+                    <div className={"flexContainer"}>
+                        {isBlank1 ? <input maxLength={2} onChange={changeListener3} placeholder={"MM"}
+                                           className={"styleOfInput twoV2 slideRight font"} type={"text"}/> :
+                            <input maxLength={2} onChange={changeListener3} placeholder={"MM"}
+                                   className={"styleOfInput two slideRight font"} type={"text"}/>}
 
-                    {isBlank2 ?
-                        <input maxLength={2} onChange={changeListener4} placeholder={"YY"}
-                               className={"styleOfInput twoV2 font"}
-                               type={"text"}/> :
-                        <input maxLength={2} onChange={changeListener4} placeholder={"YY"}
-                               className={"styleOfInput two font"}
-                               type={"text"}/>}
-                    {isBlank3 ? <input maxLength={3} onChange={changeListener5} placeholder={"e.g. 123"}
-                                       className={"styleOfInput threeV2 font"}
-                                       type={"text"}/> :
-                        <input maxLength={3} onChange={changeListener5} placeholder={"e.g. 123"}
-                               className={"styleOfInput three font"}
-                               type={"text"}/>}
-                </div>
+                        {isBlank2 ?
+                            <input maxLength={2} onChange={changeListener4} placeholder={"YY"}
+                                   className={"styleOfInput twoV2 font"}
+                                   type={"text"}/> :
+                            <input maxLength={2} onChange={changeListener4} placeholder={"YY"}
+                                   className={"styleOfInput two font"}
+                                   type={"text"}/>}
+                        {isBlank3 ? <input maxLength={3} onChange={changeListener5} placeholder={"e.g. 123"}
+                                           className={"styleOfInput threeV2 font"}
+                                           type={"text"}/> :
+                            <input maxLength={3} onChange={changeListener5} placeholder={"e.g. 123"}
+                                   className={"styleOfInput three font"}
+                                   type={"text"}/>}
+                    </div>
 
-                <div className={"flexContainer3"}>
-                    {(isBlank1 || isBlank2) ? <div className={"font textOrder4"}>Can't be blank</div> :
-                        <div style={{color: "white"}} className={"font textOrder4"}>Can't be
-                            blank</div>}
-                    {isBlank3 ? <div className={"font textOrder5"}>Can't be blank</div> :
-                        <div style={{color: "white"}} className={"font textOrder5"}>Can't be
-                            blank</div>}
-                </div>
+                    <div className={"flexContainer3"}>
+                        {(isBlank1 || isBlank2) ? <div className={"font textOrder4"}>Can't be blank</div> :
+                            <div style={{color: "white"}} className={"font textOrder4"}>Can't be
+                                blank</div>}
+                        {isBlank3 ? <div className={"font textOrder5"}>Can't be blank</div> :
+                            <div style={{color: "white"}} className={"font textOrder5"}>Can't be
+                                blank</div>}
+                    </div>
 
 
-                <div className={"flexContainer"}>
                     <button onClick={triggerButton} className={"button font"}>Confirm</button>
+
                 </div>
 
             </div> : <CorrectScreen/>}
@@ -155,4 +160,3 @@ function App() {
 
 }
 
-export default App
