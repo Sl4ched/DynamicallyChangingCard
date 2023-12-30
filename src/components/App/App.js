@@ -5,7 +5,7 @@ import ScreenLeft from "../ScreenLeft/ScreenLeft";
 
 export default function App() {
 
-    const [cardNumber, setCardNumber] = useState("0000 0000 0000 0000")
+    const [cardNumber, setCardNumber] = useState("")
     const [name, setName] = useState("JANE APPLESEED")
     const [cvc, setCvc] = useState("000")
     const [month, setMonth] = useState("00")

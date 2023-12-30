@@ -4,7 +4,7 @@ img {
     width: 80px;
 }
 
-body,html {
+body, html {
     margin: 0;
     padding: 0;
     background: white;
@@ -101,6 +101,7 @@ body,html {
 }
 
 .three {
+    flex-grow: 1;
     margin: 10px 0 15px 15px;
     max-width: 215px;
     min-width: 0;
